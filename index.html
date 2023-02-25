@@ -1,194 +1,361 @@
+<!DOCTYPE html>
+
 <head>
+
     <meta charset="UTF-8">
-    <title>新化高中志願選填</title> 
+    <title>新化高中志願選填</title>
     <style>
         .container {
             display: flex;
-			flex-direction: row;
+            flex-direction: row;
         }
-        select { /*{選取框框}*/
-            margin: auto; /* 垂直置中 */
+
+        select {
+            /*{選取框框}*/
+            margin: auto;
+            /* 垂直置中 */
             font-size: 150%;
         }
-        iframe{
+
+        iframe {
             width: 49%;
             height: 1700px;
             border: 2;
         }
+
+        /* 設定文字的初始狀態 */
+        .move {
+            display: inline-block;
+            transform: translateX(0);
+            transition: transform 1s ease-out;
+        }
+
+        /* 滑鼠移到文字上時的狀態 */
+        .move:hover {
+            transform: translateX(-50px);
+
+        }
     </style>
 
     <script type="text/javascript">
-		function changeIframe1() {
-			var select = document.getElementById("select1");
-			var iframe = document.getElementById("iframe1");
-			var selectedOption = select.options[select.selectedIndex];
-			iframe.src = selectedOption.value;
-		}
-	</script>
+        function changeIframe1() {
+            var select = document.getElementById("select1");
+            var iframe = document.getElementById("iframe1");
+            var selectedOption = select.options[select.selectedIndex];
+            iframe.src = selectedOption.value;
+        }
+    </script>
+
     <script type="text/javascript">
-		function changeIframe2() {
-			var select = document.getElementById("select2");
-			var iframe = document.getElementById("iframe2");
-			var selectedOption = select.options[select.selectedIndex];
-			iframe.src = selectedOption.value;
-		}
-	</script>
+        function changeIframe2() {
+            var select = document.getElementById("select2");
+            var iframe = document.getElementById("iframe2");
+            var selectedOption = select.options[select.selectedIndex];
+            iframe.src = selectedOption.value;
+        }
+    </script>
 
 </head>
- <!------------------------------------------------------->
+<!------------------------------------------------------->
+
 <body>
+
     <div>
-        <h1 style="font-size:200%;text-align: center;" >HHSH 校系快速查詢</h1>
+        <h1 style="font-size:200%;text-align: center;">校系快速查詢 by NZ</h1>
+        <h2 style="font-size:200%;text-align: center;"><span class="move">
+                <請善用按壓滑鼠滾輪左右移動>
+            </span></h2>
+
+
     </div>
-    <h1 style="text-align:center;">
+    <h1 style="text-align:center; color: blue;">
         ←111 --------- 110→
     </h1>
     <div class="container">
         <select id="select1" onchange="changeIframe1()">
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/001.htm">001國立臺灣大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/002.htm">002國立臺灣師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/003.htm">003國立中興大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/004.htm">004國立成功大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/005.htm">005東吳大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/006.htm">006國立政治大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/007.htm">007高雄醫學大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/008.htm">008中原大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/009.htm">009東海大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/011.htm">011國立清華大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/012.htm">012中國醫藥大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/013.htm">013國立陽明交通大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/014.htm">014淡江大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/015.htm">015逢甲大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/016.htm">016國立中央大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/017.htm">017中國文化大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/018.htm">018靜宜大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/019.htm">019大同大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/020.htm">020輔仁大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/021.htm">021國立臺灣海洋大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/022.htm">022國立高雄師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/023.htm">023國立彰化師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/026.htm">026中山醫學大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/027.htm">027國立中山大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/028.htm">028國立臺北藝術大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/030.htm">030長庚大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/031.htm">031國立臺中教育大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/032.htm">032國立臺北教育大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/033.htm">033國立臺南大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/034.htm">034國立東華大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/035.htm">035臺北市立大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/036.htm">036國立屏東大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/038.htm">038國立臺東大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/039.htm">039國立體育大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/040.htm">040元智大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/041.htm">041國立中正大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/042.htm">042大葉大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/043.htm">043中華大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/044.htm">044華梵大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/045.htm">045義守大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/046.htm">046銘傳大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/047.htm">047世新大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/050.htm">050實踐大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/051.htm">051長榮大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/056.htm">056國立臺灣藝術大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/058.htm">058國立暨南國際大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/059.htm">059南華大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/060.htm">060國立臺灣體育運動大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/063.htm">063國立臺南藝術大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/065.htm">065玄奘大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/079.htm">079真理大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/099.htm">099國立臺北大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/100.htm">100國立嘉義大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/101.htm">101國立高雄大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/108.htm">108慈濟大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/109.htm">109臺北醫學大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/110.htm">110開南大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/111.htm">111台灣首府大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/112.htm">112康寧大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/113.htm">113中信金融管理學院</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/130.htm">130佛光大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/133.htm">133明道大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/134.htm">134亞洲大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/150.htm">150國立宜蘭大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/151.htm">151國立聯合大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/152.htm">152馬偕醫學院</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/153.htm">153國立金門大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/154.htm">154臺北基督學院</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/001.htm">
+                001國立臺灣大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/002.htm">
+                002國立臺灣師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/003.htm">
+                003國立中興大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/004.htm">
+                004國立成功大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/005.htm">
+                005東吳大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/006.htm">
+                006國立政治大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/007.htm">
+                007高雄醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/008.htm">
+                008中原大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/009.htm">
+                009東海大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/011.htm">
+                011國立清華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/012.htm">
+                012中國醫藥大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/013.htm">
+                013國立陽明交通大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/014.htm">
+                014淡江大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/015.htm">
+                015逢甲大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/016.htm">
+                016國立中央大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/017.htm">
+                017中國文化大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/018.htm">
+                018靜宜大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/019.htm">
+                019大同大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/020.htm">
+                020輔仁大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/021.htm">
+                021國立臺灣海洋大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/022.htm">
+                022國立高雄師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/023.htm">
+                023國立彰化師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/026.htm">
+                026中山醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/027.htm">
+                027國立中山大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/028.htm">
+                028國立臺北藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/030.htm">
+                030長庚大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/031.htm">
+                031國立臺中教育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/032.htm">
+                032國立臺北教育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/033.htm">
+                033國立臺南大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/034.htm">
+                034國立東華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/035.htm">
+                035臺北市立大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/036.htm">
+                036國立屏東大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/038.htm">
+                038國立臺東大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/039.htm">
+                039國立體育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/040.htm">
+                040元智大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/041.htm">
+                041國立中正大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/042.htm">
+                042大葉大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/043.htm">
+                043中華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/044.htm">
+                044華梵大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/045.htm">
+                045義守大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/046.htm">
+                046銘傳大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/047.htm">
+                047世新大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/050.htm">
+                050實踐大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/051.htm">
+                051長榮大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/056.htm">
+                056國立臺灣藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/058.htm">
+                058國立暨南國際大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/059.htm">
+                059南華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/060.htm">
+                060國立臺灣體育運動大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/063.htm">
+                063國立臺南藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/065.htm">
+                065玄奘大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/079.htm">
+                079真理大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/099.htm">
+                099國立臺北大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/100.htm">
+                100國立嘉義大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/101.htm">
+                101國立高雄大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/108.htm">
+                108慈濟大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/109.htm">
+                109臺北醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/110.htm">
+                110開南大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/111.htm">
+                111台灣首府大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/112.htm">
+                112康寧大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/113.htm">
+                113中信金融管理學院</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/130.htm">
+                130佛光大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/133.htm">
+                133明道大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/134.htm">
+                134亞洲大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/150.htm">
+                150國立宜蘭大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/151.htm">
+                151國立聯合大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/152.htm">
+                152馬偕醫學院</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/153.htm">
+                153國立金門大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/154.htm">
+                154臺北基督學院</option>
         </select>
         <select id="select2" onchange="changeIframe2()">
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/001.htm">001國立臺灣大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/002.htm">002國立臺灣師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/003.htm">003國立中興大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/004.htm">004國立成功大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/005.htm">005東吳大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/006.htm">006國立政治大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/007.htm">007高雄醫學大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/008.htm">008中原大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/009.htm">009東海大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/011.htm">011國立清華大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/012.htm">012中國醫藥大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/013.htm">013國立交通大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/014.htm">014淡江大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/015.htm">015逢甲大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/016.htm">016國立中央大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/017.htm">017中國文化大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/018.htm">018靜宜大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/019.htm">019大同大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/020.htm">020輔仁大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/021.htm">021國立臺灣海洋大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/022.htm">022國立高雄師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/023.htm">023國立彰化師範大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/025.htm">"025國立陽明大學</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/".htm">026</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/026中山醫學大學.htm">027</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/027國立中山大學.htm">028</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/028國立臺北藝術大學.htm">030</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/030長庚大學.htm">031</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/031國立臺中教育大學.htm">032</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/032國立臺北教育大學.htm">033</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/033國立臺南大學.htm">034</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/034國立東華大學.htm">035</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/035臺北市立大學.htm">036</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/036國立屏東大學.htm">038</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/038國立臺東大學.htm">039</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/039國立體育大學.htm">040</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/040元智大學.htm">041</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/041國立中正大學.htm">042</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/042大葉大學.htm">043</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/043中華大學.htm">044</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/044華梵大學.htm">045</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/045義守大學.htm">046</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/046銘傳大學.htm">047</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/047世新大學.htm">050</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/050實踐大學.htm">051</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/051長榮大學.htm">056</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/056國立臺灣藝術大學.htm">058</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/058國立暨南國際大學.htm">059</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/059南華大學.htm">060</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/060國立臺灣體育運動大學.htm">063</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/063國立臺南藝術大學.htm">065</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/065玄奘大學.htm">079</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/079真理大學.htm">099</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/099國立臺北大學.htm">100</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/100國立嘉義大學.htm">101</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/101國立高雄大學.htm">108</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/108慈濟大學.htm">109</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/109臺北醫學大學.htm">110</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/110開南大學.htm">111</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/111台灣首府大學.htm">112</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/112康寧大學.htm">113</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/113中信金融管理學院.htm">130</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/130佛光大學.htm">133</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/133明道大學.htm">134</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/134亞洲大學.htm">150</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/150國立宜蘭大學.htm">151</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/151國立聯合大學.htm">152</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/152馬偕醫學院.htm">153</option>
-            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/153國立金門大學.htm">154</option>
-        </select>  
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/001.htm">
+                001國立臺灣大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/002.htm">
+                002國立臺灣師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/003.htm">
+                003國立中興大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/004.htm">
+                004國立成功大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/005.htm">
+                005東吳大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/006.htm">
+                006國立政治大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/007.htm">
+                007高雄醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/008.htm">
+                008中原大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/009.htm">
+                009東海大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/011.htm">
+                011國立清華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/012.htm">
+                012中國醫藥大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/013.htm">
+                013國立交通大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/014.htm">
+                014淡江大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/015.htm">
+                015逢甲大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/016.htm">
+                016國立中央大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/017.htm">
+                017中國文化大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/018.htm">
+                018靜宜大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/019.htm">
+                019大同大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/020.htm">
+                020輔仁大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/021.htm">
+                021國立臺灣海洋大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/022.htm">
+                022國立高雄師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/023.htm">
+                023國立彰化師範大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/025.htm">
+                025國立陽明大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/026.htm">
+                026中山醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/027.htm">
+                027國立中山大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/028.htm">
+                028國立臺北藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/030.htm">
+                030長庚大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/031.htm">
+                031國立臺中教育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/032.htm">
+                032國立臺北教育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/033.htm">
+                033國立臺南大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/034.htm">
+                034國立東華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/035.htm">
+                035臺北市立大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/036.htm">
+                036國立屏東大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/038.htm">
+                038國立臺東大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/039.htm">
+                039國立體育大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/040.htm">
+                040元智大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/041.htm">
+                041國立中正大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/042.htm">
+                042大葉大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/043.htm">
+                043中華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/044.htm">
+                044華梵大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/045.htm">
+                045義守大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/046.htm">
+                046銘傳大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/047.htm">
+                047世新大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/050.htm">
+                050實踐大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/051.htm">
+                051長榮大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/056.htm">
+                056國立臺灣藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/058.htm">
+                058國立暨南國際大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/059.htm">
+                059南華大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/060.htm">
+                060國立臺灣體育運動大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/063.htm">
+                063國立臺南藝術大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/065.htm">
+                065玄奘大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/079.htm">
+                079真理大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/099.htm">
+                099國立臺北大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/100.htm">
+                100國立嘉義大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/101.htm">
+                101國立高雄大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/108.htm">
+                108慈濟大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/109.htm">
+                109臺北醫學大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/110.htm">
+                110開南大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/111.htm">
+                111台灣首府大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/112.htm">
+                112康寧大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/113.htm">
+                113中信金融管理學院</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/130.htm">
+                130佛光大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/133.htm">
+                133明道大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/134.htm">
+                134亞洲大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/150.htm">
+                150國立宜蘭大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/151.htm">
+                151國立聯合大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/152.htm">
+                152馬偕醫學院</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/153.htm">
+                153國立金門大學</option>
+            <option value="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/154.htm">
+                154臺北基督學院</option>
+        </select>
     </div>
 
-    <iframe id="iframe1" src="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/001.htm"></iframe>
-    
-    <iframe id="iframe2" src="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/001.htm"></iframe>
-       
+    <iframe id="iframe1"
+        src="https://www.cac.edu.tw/cacportal/apply_his_report/111/111_sieve_standard/report/001.htm"></iframe>
+
+    <iframe id="iframe2"
+        src="https://www.cac.edu.tw/cacportal/apply_his_report/110/110_sieve_standard/report/001.htm"></iframe>
+
 </body>
